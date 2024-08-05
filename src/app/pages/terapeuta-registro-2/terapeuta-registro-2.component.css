@@ -1,0 +1,107 @@
+* {
+    box-sizing: none;
+    color: #163D32;
+    max-width: 430px;
+}
+
+#screenTop {
+    margin-top: 75px;
+    margin-left: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+button {
+    font-size: 16px;
+    padding: 6px 27px 6px 27px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: #163D32;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    margin-right: 25px;
+}
+
+form {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+}
+
+h1 {
+    font-size: 18px;
+    margin-top: 70px;
+}
+
+#photoCard img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+#photoCard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#cameraIcon {
+    background-color: #F5A8A0;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    right: 100px;
+    border: 3px solid;
+    border-color: white;
+    cursor: pointer;
+}
+
+i{
+    color: white;
+    font-size: 35px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 11px;
+}
+
+input#fotoPerfil {
+    display: none
+}
+
+label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #a6a6a6
+}
+
+input {
+    font-size: 22px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+form button {
+    margin-top: 40px;
+    width: 140px;
+    background-color: #F5A8A0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
