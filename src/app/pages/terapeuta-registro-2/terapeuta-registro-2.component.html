@@ -1,5 +1,5 @@
 <div id="screenTop">
-  <button>Regresar</button>
+  <button [routerLink]="'/terapeuta-registro-1'">Regresar</button>
   <img
     src="../../../assets/img/logoCreSentia.png"
     alt="Logo de CreSentia"
@@ -26,6 +26,8 @@
     <input type="text" id="nombre" name="nombre" required />
     <label for="apodo">¿Cómo te gusta que te llamen?</label>
     <input type="text" id="apodo" name="apodo" required />
-    <button type="submit">¡Listo!</button>
+    <button type="submit" [routerLink]="'/terapeuta-registro-3'">
+      ¡Listo!
+    </button>
   </form>
 </main>

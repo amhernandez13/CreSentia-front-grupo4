@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { read } from 'fs';
 
 @Component({
   selector: 'app-terapeuta-registro-2',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './terapeuta-registro-2.component.html',
   styleUrl: './terapeuta-registro-2.component.css'
 })
 export class TerapeutaRegistro2Component {
   constructor(){}
 
+
+  
   ngOnInit(){
   }
 
