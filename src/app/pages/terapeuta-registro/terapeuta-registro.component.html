@@ -1,0 +1,181 @@
+<mat-horizontal-stepper [linear]="false" #stepper>
+  <div id="cover-stepper"></div>
+
+  <!-- Paso 1 -->
+  <mat-step>
+    <div id="screenTop">
+      <button mat-button (click)="stepper.previous()">Regresar</button>
+      <img
+        src="../../../assets/img/logoCreSentia.png"
+        alt="Logo de CreSentia"
+        height="100px"
+      />
+    </div>
+    <div id="screenMiddle">
+      <h2>Hola</h2>
+      <h3>Gracias por estar aquí.</h3>
+      <p>¿Te parece si nos conocemos un poco mejor?</p>
+      <button mat-button (click)="stepper.next()">Dale, vamos adelante</button>
+    </div>
+  </mat-step>
+
+  <!-- Paso 2 -->
+  <mat-step [stepControl]="secondFormGroup">
+    <div id="screenTop">
+      <button mat-button (click)="stepper.previous()">Regresar</button>
+      <img
+        src="../../../assets/img/logoCreSentia.png"
+        alt="Logo de CreSentia"
+        height="100px"
+      />
+    </div>
+    <main>
+      <form [formGroup]="secondFormGroup">
+        <h2 id="step2">Empieza con tu nombre y tu mejor foto:</h2>
+        <div id="photoCard">
+          <img [src]="url" alt="Foto de perfil" id="profile-Pic" />
+          <label for="input-file" id="cameraIcon">
+            <i class="bi bi-camera"></i>
+          </label>
+          <input
+            type="file"
+            (change)="onselectFile($event)"
+            accept="image/jpeg, image/jpg, image/png"
+            id="input-file"
+            style="display: none"
+          />
+        </div>
+        <label for="nombre">Nombre y apellidos</label>
+        <input type="text" id="nombre" formControlName="nombre" required />
+
+        <label for="apodo">¿Cómo te gusta que te llamen?</label>
+        <input type="text" id="apodo" formControlName="apodo" required />
+
+        <button
+          mat-button
+          (click)="goToNext(stepper)"
+          [disabled]="!secondFormGroup.valid"
+        >
+          ¡Listo!
+        </button>
+      </form>
+    </main>
+  </mat-step>
+
+  <!-- Paso 3 -->
+  <mat-step>
+    <div id="screenTop">
+      <button mat-button (click)="stepper.previous()">Regresar</button>
+      <img
+        src="../../../assets/img/logoCreSentiaLetras.png"
+        alt="Logo de CreSentia"
+        height="150px"
+      />
+    </div>
+    <div id="screenMiddle">
+      <h2>Un gusto conocerte {{ finalFormGroup.get("apodo")?.value }}</h2>
+      <p>Me faltan algunas preguntas, así que sigo avanzando contigo.</p>
+      <button mat-button (click)="stepper.next()">Siguiente</button>
+    </div>
+  </mat-step>
+
+  <!-- Paso 4 y Final -->
+  <mat-step>
+    <div id="screenTop">
+      <button mat-button (click)="stepper.previous()">Regresar</button>
+      <img
+        src="../../../assets/img/logoCreSentia.png"
+        alt="Logo de CreSentia"
+        height="100px"
+      />
+    </div>
+
+    <div id="step4" class="container">
+      <h2>
+        Ayúdame a completar la siguiente info para terminar de completar tu
+        perfil:
+      </h2>
+      <form [formGroup]="finalFormGroup" (ngSubmit)="onSubmit()">
+        <label>Sexo:</label>
+        <div class="gender-options">
+          <label class="gender-option">
+            <input
+              type="radio"
+              formControlName="sexo"
+              value="hombre"
+              required
+            />
+            <span></span> Hombre
+          </label>
+          <label class="gender-option">
+            <input type="radio" formControlName="sexo" value="mujer" required />
+            <span></span> Mujer
+          </label>
+        </div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required />
+
+        <label for="identificacion">Número de Identificación:</label>
+        <input
+          type="text"
+          id="identificacion"
+          formControlName="identificacion"
+          required
+        />
+
+        <label for="eps">EPS:</label>
+        <input type="text" id="eps" formControlName="eps" required />
+
+        <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+        <input
+          type="date"
+          id="fecha-nacimiento"
+          formControlName="fechaNacimiento"
+          required
+        />
+
+        <div class="form-row">
+          <div>
+            <label for="pais">País:</label>
+            <input type="text" id="pais" formControlName="pais" required />
+          </div>
+          <div>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" formControlName="ciudad" required />
+          </div>
+        </div>
+
+        <label for="password">Contraseña:</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          required
+        />
+        <label for="confirm-password">Confirmar Contraseña:</label>
+        <input
+          type="password"
+          id="confirm-password"
+          formControlName="confirmPassword"
+          required
+        />
+
+        <div class="checkbox-container">
+          <input
+            type="checkbox"
+            id="show-password"
+            (change)="togglePasswordVisibility()"
+          />
+          <label for="show-password">Mostrar contraseñas</label>
+        </div>
+
+        <div id="screenBottom">
+          <button mat-button type="submit" [disabled]="!finalFormGroup.valid">
+            Siguiente
+          </button>
+        </div>
+      </form>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

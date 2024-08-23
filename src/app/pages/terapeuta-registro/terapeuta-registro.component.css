@@ -1,0 +1,368 @@
+/* Ocultar barra de navegación del MatStepper */
+.mat-horizontal-stepper-header-container,
+.mat-vertical-stepper-header-container,
+.mat-step-header {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+/* Estilo del contenedor principal y otros elementos */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #163d32;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Otros estilos para tu diseño general */
+#screenTop,
+#screenMiddle,
+#screenBottom {
+  position: relative;
+  z-index: 5;
+}
+
+/* Estilo del contenedor principal */
+#screenTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Imagen en #screenTop */
+#screenTop img {
+  height: 80px;
+  max-width: 150px;
+}
+
+/* Botón de "Regresar" */
+#screenTop button {
+    background-color: transparent;
+    color: #163d32;
+    border: 1px solid #163d32;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center; /* Centrar el texto */
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+    max-width: 150px; /* Ajuste del ancho máximo */
+  }
+  
+  #screenTop button:hover {
+    background-color: #163d32;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera al hacer hover */
+  }
+  
+  #screenTop button i {
+    font-size: 18px; /* Tamaño del icono */
+  }
+
+/* Estilo para los títulos */
+h2 {
+    font-size: 30px; /* Ajuste de tamaño según Adobe XD */
+    font-family: "Poppins Bold", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #163d32;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-family: "Poppins Semibold Italic", sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #163d32;
+  }
+  
+  p {
+    font-size: 18px;
+    font-family: "Poppins Regular", sans-serif;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+/* Estilo específico para el h2 en el paso 4 */
+#step4 h2 {
+    font-size: 18px; /* Ajustado según la página 5 del Adobe XD */
+    font-family: "Poppins Bold", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #163d32;
+  }
+
+/* Estilo para el botón principal */
+button {
+  background-color: #f5a8a0;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  max-width: 430px;
+}
+
+button:hover {
+  background-color: #ed878f;
+}
+
+/* Ajuste para el botón en el paso 2 */
+form button {
+  width: auto;
+  max-width: 350px; /* Ajuste del ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 15px 30px; /* Ajuste del tamaño del botón */
+  background-color: #f5a8a0;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+form button:hover {
+  background-color: #ed878f;
+}
+
+/* Ajuste para el botón en el paso 4 */
+#screenMiddle button {
+  width: auto;
+  max-width: 350px; /* Ajuste del ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 15px 30px; /* Ajuste del tamaño del botón */
+  background-color: #f5a8a0;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+#screenMiddle button:hover {
+  background-color: #ed878f;
+}
+
+/* Estilo del formulario en el paso 2 */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Ajuste del perfil y la cámara */
+#photoCard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#photoCard img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#cameraIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #F5A8A0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#cameraIcon i {
+    color: white;
+    font-size: 35px;
+}
+
+
+/* Estilos para los inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Botones de selección de sexo en el paso 4 */
+.gender-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .gender-option {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: white;
+    font-family: "Poppins Regular", sans-serif;
+    font-size: 16px;
+    color: #163d32;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .gender-option input {
+    display: none;
+  }
+  
+  .gender-option span {
+    margin-left: 35px; /* Espacio para el icono de check */
+    display: flex;
+    align-items: center; /* Alineación vertical del texto */
+  }
+  
+  .gender-option input:checked + span::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #f5a8a0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gender-option input:checked + span::after {
+    content: '\2713'; /* Unicode para un check distinto */
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* Centrar verticalmente los elementos en screenMiddle */
+#screenMiddle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - 200px);
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Ajuste para centrar el botón en el paso 4 */
+#screenBottom button {
+    width: auto;
+    max-width: 350px;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 15px 30px;
+    background-color: #f5a8a0;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    transition: background-color 0.3s;
+    display: block;
+  }
+  
+  #screenBottom button:hover {
+    background-color: #ed878f;
+  }
+
+/* Ajuste para los botones de país y ciudad */
+.form-row {
+    display: flex;
+    gap: 20px; /* Espacio entre los inputs */
+    justify-content: space-between;
+  }
+  
+  .form-row div {
+    flex: 1; /* Hacer que ambos inputs ocupen el mismo espacio */
+  }
+  
+  .form-row div label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-row div input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+
+/* Estilo responsivo para versiones de escritorio */
+@media (min-width: 768px) {
+  body {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+  }
+}
