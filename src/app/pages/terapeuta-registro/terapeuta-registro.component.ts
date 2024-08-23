@@ -28,20 +28,40 @@ export class TerapeutaRegistroComponent {
       foto: [null], // Añadido campo foto
     });
 
-    this.finalFormGroup = this._formBuilder.group({
-      nombre: [''],
-      apodo: [''],
-      sexo: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      identificacion: ['', Validators.required],
-      eps: ['', Validators.required],
-      fechaNacimiento: ['', Validators.required],
-      pais: ['', Validators.required],
-      ciudad: ['', Validators.required],
-      password: ['', Validators.required],
-      confirmPassword: ['', Validators.required],
-      foto: [null], // Añadido campo foto
-    });
+    this.finalFormGroup = this._formBuilder.group(
+      {
+        nombre: [''],
+        apodo: [''],
+        sexo: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        identificacion: ['', Validators.required],
+        eps: ['', Validators.required],
+        fechaNacimiento: ['', Validators.required],
+        pais: ['', Validators.required],
+        ciudad: ['', Validators.required],
+        password: ['', Validators.required],
+        confirmPassword: ['', Validators.required],
+        foto: [null], // Añadido campo foto
+      },
+      { validator: this.passwordMatchValidator }
+    );
+  }
+
+  passwordMatchValidator(formGroup: FormGroup) {
+    const password = formGroup.get('password')?.value;
+    const confirmPassword = formGroup.get('confirmPassword')?.value;
+
+    if (password !== confirmPassword) {
+      formGroup.get('confirmPassword')?.setErrors({ mismatch: true });
+    } else {
+      formGroup.get('confirmPassword')?.setErrors(null);
+    }
+  }
+
+  checkPasswordMatch() {
+    // Forzar la validación en el control de confirmación de contraseña
+    const confirmPasswordControl = this.finalFormGroup.get('confirmPassword');
+    confirmPasswordControl?.updateValueAndValidity();
   }
 
   onselectFile(event: any) {
@@ -81,12 +101,19 @@ export class TerapeutaRegistroComponent {
   onSubmit() {
     if (this.finalFormGroup.valid) {
       const formData = new FormData();
-      for (const key in this.finalFormGroup.value) {
-        if (this.finalFormGroup.value.hasOwnProperty(key)) {
-          formData.append(key, this.finalFormGroup.value[key]);
+      // Crear una copia del objeto finalFormGroup.value
+      const formValue = { ...this.finalFormGroup.value };
+
+      // Eliminar el campo confirmPassword
+      delete formValue.confirmPassword;
+
+      // Añadir los campos del formulario a formData
+      for (const key in formValue) {
+        if (formValue.hasOwnProperty(key)) {
+          formData.append(key, formValue[key]);
         }
       }
-      console.log(this.finalFormGroup.value);
+      console.log(formValue);
       alert('Formulario enviado exitosamente!');
       // Aquí puedes enviar los datos al servidor o manejar la lógica adicional
     }
