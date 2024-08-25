@@ -7,13 +7,15 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatStepperModule } from '@angular/material/stepper';
+import { UserTerapeutaServiceService } from '../../services/user-terapeuta-service.service'; // Importa el servicio
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-terapeuta-registro',
   standalone: true,
-  imports: [MatStepperModule, ReactiveFormsModule, CommonModule],
+  imports: [CommonModule, MatStepperModule, ReactiveFormsModule],
   templateUrl: './terapeuta-registro.component.html',
-  styleUrl: './terapeuta-registro.component.css',
+  styleUrls: ['./terapeuta-registro.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class TerapeutaRegistroComponent {
@@ -21,11 +23,15 @@ export class TerapeutaRegistroComponent {
   finalFormGroup: FormGroup;
   url: string | ArrayBuffer | null = '../../../assets/img/profileIcon.jpg';
 
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(
+    private _formBuilder: FormBuilder,
+    private UserTerapeutaService: UserTerapeutaServiceService,
+    private router: Router // Inyectar el servicio de navegación
+  ) {
     this.secondFormGroup = this._formBuilder.group({
       nombre: ['', Validators.required],
       apodo: ['', Validators.required],
-      foto: [null], // Añadido campo foto
+      foto: [null], // Campo para la foto
     });
 
     this.finalFormGroup = this._formBuilder.group(
@@ -41,7 +47,7 @@ export class TerapeutaRegistroComponent {
         ciudad: ['', Validators.required],
         password: ['', Validators.required],
         confirmPassword: ['', Validators.required],
-        foto: [null], // Añadido campo foto
+        foto: [null], // Campo para la foto
       },
       { validator: this.passwordMatchValidator }
     );
@@ -59,11 +65,11 @@ export class TerapeutaRegistroComponent {
   }
 
   checkPasswordMatch() {
-    // Forzar la validación en el control de confirmación de contraseña
     const confirmPasswordControl = this.finalFormGroup.get('confirmPassword');
     confirmPasswordControl?.updateValueAndValidity();
   }
 
+  // Este método maneja la selección de archivos
   onselectFile(event: any) {
     if (event.target.files && event.target.files[0]) {
       const reader = new FileReader();
@@ -72,7 +78,7 @@ export class TerapeutaRegistroComponent {
         if (result) {
           this.url = result;
           this.secondFormGroup.patchValue({
-            foto: event.target.files[0],
+            foto: event.target.files[0], // Se asegura de que solo un archivo se seleccione
           });
         }
       };
@@ -93,7 +99,6 @@ export class TerapeutaRegistroComponent {
   }
 
   goToNext(stepper: any) {
-    // Copiar valores del segundo formulario al finalFormulario
     this.finalFormGroup.patchValue(this.secondFormGroup.value);
     stepper.next();
   }
@@ -101,21 +106,41 @@ export class TerapeutaRegistroComponent {
   onSubmit() {
     if (this.finalFormGroup.valid) {
       const formData = new FormData();
-      // Crear una copia del objeto finalFormGroup.value
       const formValue = { ...this.finalFormGroup.value };
-
-      // Eliminar el campo confirmPassword
       delete formValue.confirmPassword;
 
-      // Añadir los campos del formulario a formData
       for (const key in formValue) {
         if (formValue.hasOwnProperty(key)) {
           formData.append(key, formValue[key]);
         }
       }
-      console.log(formValue);
-      alert('Formulario enviado exitosamente!');
-      // Aquí puedes enviar los datos al servidor o manejar la lógica adicional
+
+      // Se asegura de que solo un archivo esté siendo añadido
+      const fotoFile = this.secondFormGroup.get('foto')?.value;
+      if (fotoFile) {
+        formData.append('foto', fotoFile);
+      }
+
+      // Imprime el contenido de FormData para depuración
+      console.log('Datos enviados al backend:');
+      formData.forEach((value, key) => {
+        console.log(`${key}:`, value);
+      });
+
+      this.UserTerapeutaService.registerUser(formData).subscribe({
+        next: (response) => {
+          console.log('Registro exitoso', response);
+          alert('Registro exitoso!');
+          // Navegar a otra ruta si el registro es exitoso
+          this.router.navigate(['/ruta-a-donde-ir']);
+        },
+        error: (error) => {
+          console.error('Error en el registro', error);
+          alert(
+            'Ocurrió un error durante el registro. Verifica que hayas diligenciado todos los campos, incluído el de tu foto.'
+          );
+        },
+      });
     }
   }
 }
