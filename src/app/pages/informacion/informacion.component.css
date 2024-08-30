@@ -1,0 +1,75 @@
+*{
+    font-family: "Kanit", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#rectangulo{
+    background-color:  #b6e1e2;
+    width: 8rem;
+    height: 20rem;
+    margin-left: 4rem;
+    border-radius: 0rem 0rem 1rem 0rem;
+}
+
+#foto{
+    width: 12rem;
+    height: 12rem;  
+    position: absolute;
+    border-radius: 50%;
+    top: 4.2rem;
+    left: 2rem;
+    background-color: #7dcdc6;
+    border: 15px solid white;
+    box-shadow: 2rem 0.5rem 3rem #cfcfcf;
+}
+
+#Principal{
+    position: absolute;
+    margin: 1rem 4rem;
+}
+
+#Principal h1{
+    color: #163d32;
+}
+
+#Principal h3{
+    color: #52a89c;
+}
+
+#Circulos{
+    display: flex;
+    position: absolute;
+    margin: 6rem 3.5rem;
+}
+
+.circulo{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 0.2rem solid #fcc768;
+    margin: 0.5rem;
+}
+
+#parrafo{
+    position: absolute;
+    margin: 10rem 4rem;
+}
+
+.Texto{
+    margin-bottom: 1rem;
+}
+
+.azul{
+    color: #78bbb2;
+}
+
+.rosado{
+    color: #e7b4b2;
+}
+
+footer p{
+    text-align: center;
+    margin: 32rem 9rem auto;
+    color: #5eaea3;
+}

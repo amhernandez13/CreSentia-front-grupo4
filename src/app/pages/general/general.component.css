@@ -1,0 +1,114 @@
+*{
+    font-family: "Kanit", sans-serif;
+}
+
+img{
+    width: 8rem;
+    margin: 0.5rem;
+}
+
+main{
+    display: grid;
+    place-items: center;
+}
+
+main h3{
+    color: #20453b;
+    padding-left: 1rem;
+}
+
+p{
+    color: #c3c3c3;
+}
+
+.Info{
+    height: 2rem;
+    width: 20rem;
+    border: 2px solid #eff0f1;
+    border-radius: 0.5rem;
+}
+
+#genero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#genero Button {
+    height: 2.5rem;
+    width: 10rem;
+    background-color: white;
+    border: 2px solid #eff0f1;
+    border-radius: 0.5rem;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#genero input{
+    display: none;
+}
+
+#genero span{
+    display: inline-block;
+    position: relative;
+    height: 2em;
+    width: 2em;
+    right: 1.2em;
+    top: 0.2em;
+    background: #3a9c8f;
+    border-radius: 100%;
+    transition: all 0.7s;
+}
+
+#genero label{
+    font-size: 0.8em;
+    cursor: pointer;
+    position: relative;
+}
+
+#genero span:after{
+    content: "";
+    position: absolute;
+    border: solid white;
+    border-width: 0 0.30em 0.30em 0;
+    transform: rotate(45deg);
+    width: 0.50em;
+    height: 1em;
+    left: 0.7em;
+    top: 0.25em;
+    opacity: 0;
+    transition: .3s ease;   
+}
+
+#genero label input:checked ~ span:after{
+    opacity: 1;
+}
+
+
+#Localidad input{
+    height: 2rem;
+    width: 9.5rem;
+    border: 2px solid #eff0f1;
+    border-radius: 0.5rem;
+}
+
+.Placeholder {
+    color: #aaa;
+    height: 2rem;
+    width: 20rem;
+    border: 2px solid #eff0f1;
+    border-radius: 0.5rem;
+}
+
+#Enviar{
+    margin: 2rem;
+    width: 20rem;
+    height: 3rem;
+    background-color: #e99799;
+    border: 2px solid #eff0f1;
+    color: #244238;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
