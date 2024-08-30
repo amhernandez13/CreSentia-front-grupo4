@@ -6,6 +6,10 @@
     pointer-events: none !important;
 }
 
+.mat-stepper-vertical, .mat-stepper-horizontal {
+  background-color: white !important;
+}
+
 /* Estilo del contenedor principal y otros elementos */
 body {
   font-family: "Poppins", sans-serif;

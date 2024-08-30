@@ -13,7 +13,7 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
 import { Formulario2Component } from './pages/formulario2/formulario2.component';
 import { ConsentimientoComponent } from './pages/consentimiento/consentimiento.component';
 import { CasaComponent } from './pages/casa/casa.component';
-import { InformacionComponent } from './pages/Informacion/informacion.component';
+import { InformacionComponent } from './pages/informacion/informacion.component';
 import { PagoComponent } from './pages/pago/pago.component';
 import { ProgramaComponent } from './pages/programa/programa.component';
 import { SesionComponent } from './pages/sesion/sesion.component';
