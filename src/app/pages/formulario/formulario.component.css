@@ -42,3 +42,14 @@ footer p{
     place-items: center;
     margin-top: 10rem;
 }
+
+#Enviar{
+    margin: 2rem;
+    width: 20rem;
+    height: 3rem;
+    background-color: #e99799;
+    border: 2px solid #eff0f1;
+    color: #244238;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}

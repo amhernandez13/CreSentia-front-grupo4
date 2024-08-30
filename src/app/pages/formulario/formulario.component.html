@@ -1,41 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./formulario.component.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
-</head>
+<nav>
+  <img src="../../../assets/img/logoCreSentia.png" alt="" />
+</nav>
+<main>
+  <div>
+    <p>Nivel educativo</p>
+    <input type="text" />
+  </div>
 
-<body>
-    <nav>
-        <img src="../../../assets/img/logoCreSentia.png" alt="">
-    </nav>
-    <main>
-        <div>
-            <p>Nivel educativo</p>
-            <input type="text">
-        </div>
+  <div>
+    <p>Ocupacion</p>
+    <input type="text" />
+  </div>
 
-        <div>
-            <p>Ocupacion</p>
-            <input type="text">
-        </div>
+  <div>
+    <p>Celular</p>
+    <input type="text" />
+  </div>
 
-        <div>
-            <p>Celular</p>
-            <input type="text">
-        </div>
+  <div>
+    <button [routerLink]="'/texto2'" id="Enviar">ENVIAR</button>
+  </div>
+</main>
 
-        <div>
-            <button id="Enviar">ENVIAR</button>
-        </div>
-    </main>
-
-    <footer>
-        <p>Dale sentido a tu vida</p>
-    </footer>
-</body>
-</html>
+<footer>
+  <p>Dale sentido a tu vida</p>
+</footer>

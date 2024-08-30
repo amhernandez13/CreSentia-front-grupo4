@@ -1,67 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./general.component.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
-</head>
+<header>
+  <img src="../../../assets/img/logo.png" alt="" />
+</header>
 
-<body>
-    <header>
-    <img src="../../../assets/img/logo.png" alt="">
-    </header>
+<main>
+  <h3>
+    Ayudame a completar la siguiente info para terminar de completar tu perfil:
+  </h3>
 
-    <main>
-        <h3>Ayudame a completar la siguiente info para terminar de completar tu perfil:</h3>
-        
-        <div>
-            <p>Sex</p>
-                <div id="genero">
-                    <Button><label>
-                        <input type="checkbox" class="only-one">
-                        <span></span>
-                    </label>Mujer</Button>
-    
-                    <Button><label>
-                        <input type="checkbox" class="only-one">
-                        <span></span>
-                    </label>Hombre</Button>
-                </div>
-        </div>
+  <div>
+    <p>Sex</p>
+    <div id="genero">
+      <Button
+        ><label>
+          <input type="checkbox" class="only-one" />
+          <span></span> </label
+        >Mujer</Button
+      >
 
-        <div>
-            <p>Email</p>
-            <input type="text" name="email" class="Info">
-        </div>
-    
-        <div>
-            <p>Numero de identificacion</p>
-            <input type="text" name="Numero de identificacion" class="Info">
-        </div>
+      <Button
+        ><label>
+          <input type="checkbox" class="only-one" />
+          <span></span> </label
+        >Hombre</Button
+      >
+    </div>
+  </div>
 
-        <div>
-            <p>EPS</p>
-            <input type="text" name="EPS" class="Info">
-        </div>
+  <div>
+    <p>Email</p>
+    <input type="text" name="email" class="Info" />
+  </div>
 
-        <div>
-            <p>Fecha de nacimiento</p>
-            <input type="text" id="Fecha" name="nacimiento" class="Placeholder" placeholder="DD/MM/AA">
-        </div>
+  <div>
+    <p>Numero de identificacion</p>
+    <input type="text" name="Numero de identificacion" class="Info" />
+  </div>
 
-        <div id="Localidad">
-            <p>Pais/ Ciudad</p>
-            <input type="text" name="Localidad">
-            <input type="text">
-        </div>
+  <div>
+    <p>EPS</p>
+    <input type="text" name="EPS" class="Info" />
+  </div>
 
-        <button id="Enviar">ENVIAR</button>
+  <div>
+    <p>Fecha de nacimiento</p>
+    <input
+      type="text"
+      id="Fecha"
+      name="nacimiento"
+      class="Placeholder"
+      placeholder="DD/MM/AA"
+    />
+  </div>
 
-    </main>
+  <div id="Localidad">
+    <p>Pais/ Ciudad</p>
+    <input type="text" name="Localidad" />
+    <input type="text" />
+  </div>
 
-
-</body>
-</html>
+  <button [routerLink]="'/texto'" id="Enviar">ENVIAR</button>
+</main>

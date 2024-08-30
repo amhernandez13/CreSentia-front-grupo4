@@ -14,4 +14,19 @@ img{
        place-items: center;
        text-align: center;
 }
-   
+
+#buttonSiguiente {
+       display: flex;
+       justify-content: center;
+}
+
+#Enviar{
+       
+       width: 20rem;
+       height: 3rem;
+       background-color: #e99799;
+       border: 2px solid #eff0f1;
+       color: #244238;
+       border-radius: 0.5rem;
+       font-weight: 600;
+   }
