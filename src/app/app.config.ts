@@ -10,6 +10,7 @@ import {
   provideAnimations,
 } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,6 +20,6 @@ export const appConfig: ApplicationConfig = {
     BrowserModule, // No es necesario si no tienes módulos tradicionales, pero lo mantendré aquí por ahora
     BrowserAnimationsModule, // Lo mismo que BrowserModule
     provideAnimations(),
-    provideHttpClient(), // Reemplaza HttpClientModule con provideHttpClient
+    provideHttpClient(), provideAnimationsAsync(), // Reemplaza HttpClientModule con provideHttpClient
   ],
 };

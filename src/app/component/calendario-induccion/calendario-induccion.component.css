@@ -1,0 +1,150 @@
+/* Encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-left {
+  font-size: 24px;
+  font-weight: bold;
+  color: #163D32;
+}
+
+.header-right {
+  font-size: 18px;
+  font-weight: normal;
+  color: #163D32;
+}
+
+/* Selector de días */
+.day-selector {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px; /* Mantener espacio entre los botones */
+}
+
+.day-selector button {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF; /* Fondo blanco para los días */
+  border: 1px solid #E0E0E0; /* Borde gris claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s;
+  color: #163D32;
+}
+
+.day-selector button.selected {
+  background-color: #e89698; /* Color de los botones seleccionados */
+  color: white; /* Letras blancas para los botones seleccionados */
+  border: none;
+}
+
+.day-selector button.selected .day-name,
+.day-selector button.selected .day-number {
+  color: white; /* Asegura que los textos también se pongan blancos al seleccionar */
+}
+
+.day-name {
+  font-size: 12px;
+  font-weight: normal;
+  color: #163D32;
+}
+
+.day-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #163D32;
+}
+
+/* Cuadrícula de horas */
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hour-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E0E0E0;
+  padding: 10px;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #163D32;
+}
+
+.hour-cell:focus,
+.hour-cell.selected {
+  background-color: #e89698 !important; /* Color de los botones seleccionados */
+  color: white; /* Letras blancas para los botones seleccionados */
+  border: none;
+}
+
+.hour-cell:hover {
+  background-color: #F5F5F5;
+}
+
+/* Confirmación */
+.confirmation {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.confirmation button {
+  background-color: #e6b0ae; /* Color del botón de "Programar Sesión" */
+  color: #163D32;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+  width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+}
+
+.confirmation button:hover {
+  background-color: #e89c93; /* Un poco más oscuro al pasar el mouse */
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 430px) {
+  .day-selector {
+      flex-wrap: nowrap;
+      gap: 10px;
+  }
+
+  .day-selector button {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 60px;
+      padding: 8px 4px;
+  }
+
+  .day-name {
+      font-size: 10px;
+  }
+
+  .day-number {
+      font-size: 14px;
+  }
+}

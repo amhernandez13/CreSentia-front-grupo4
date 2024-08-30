@@ -1,0 +1,34 @@
+<!-- Encabezado con "Calendario" y el mes actual -->
+<div class="header">
+  <div class="header-left">Calendario</div>
+  <div class="header-right">{{ currentMonth }}</div>
+</div>
+
+<!-- Botones para seleccionar días -->
+<div class="day-selector">
+  <button
+    *ngFor="let day of workWeekDays"
+    (click)="onDaySelect(day)"
+    [ngClass]="{ selected: selectedDay && selectedDay.getDay() === day }"
+  >
+    <div class="day-name">{{ dayNames[day] }}</div>
+    <div class="day-number">{{ getDayNumber(day) }}</div>
+  </button>
+</div>
+
+<!-- Mostrar la cuadrícula de horas 3x3 solo si se ha seleccionado un día -->
+<div *ngIf="selectedDay" class="hours-grid">
+  <div
+    class="hour-cell"
+    *ngFor="let hour of workHours"
+    (click)="onHourSelect(hour)"
+    [ngClass]="{ selected: selectedHour === hour }"
+  >
+    {{ hour }}
+  </div>
+</div>
+
+<!-- Mostrar solo el botón de "Programar Sesión" -->
+<div *ngIf="selectedHour" class="confirmation">
+  <button (click)="scheduleAppointment()">Programar Sesión</button>
+</div>
