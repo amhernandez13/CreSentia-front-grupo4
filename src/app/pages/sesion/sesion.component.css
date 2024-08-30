@@ -1,0 +1,180 @@
+*{
+    font-family: "Kanit", sans-serif;
+    margin: 0;
+}
+
+
+#Grupo{
+    position: absolute;
+    height: 22rem;
+    margin: auto -1.6rem;
+}
+
+
+#logo{
+    width: 12rem;
+    margin: 0.5rem 5rem;
+    position: absolute;
+    margin-top: 1rem;
+}
+
+#blanco{
+    background-color: #ffff;
+    width: 23.125rem;
+    height: 20rem;
+    margin: 18.5rem auto auto;
+    border-radius: 2rem;
+    position: absolute;
+}
+
+#pequeño{
+    background-color: #d8d8d8;
+    width: 4rem;
+    height: 0.5rem;
+    border-radius: 1rem;
+    position: absolute;
+    margin: 1rem 10.5rem;
+}
+
+#Circulos{
+    display: flex;
+    position: absolute;
+    margin: 2.5rem 0.8rem;
+}
+
+.circulo{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border: 0.15rem solid #fcc768;
+    margin: 0.20rem;
+}
+
+#blanco h2{
+    color: #163d32;
+    margin: 2rem 1rem;
+}
+
+#blanco p{
+    color: #3d9d91;
+    margin: -2.8em 1rem;
+    font-weight: 500;
+    font-size: small;
+
+}
+
+#rosa{
+    background-color: #faeeed;
+    width: 23.125rem;
+    height: 28rem;
+    position: absolute;
+    margin: 4.5rem auto auto;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+
+#texto1{
+    margin: 2rem 1.2rem auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#texto1 select{
+    background-color:  #faeeed;
+    border: 1rem ;
+    color: #4e6960;
+    list-style: none;   
+    appearance: none;     
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#texto1 p{
+    font-size: medium; 
+    font-weight: 300;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.cajas{
+    height: 6rem;
+    background-color: #ffff;
+    border: 0.2rem solid #ffff;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: #5d5d5f;
+}
+
+.cajas:hover{
+    background-color: #3a9c8f;
+    border: 0.2rem solid #3a9c8f;
+    color: #ffff 
+}
+
+#grid span:hover{
+    color: #ffff;
+}
+
+#grid span{
+    color: #aaaaac;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 1rem auto;
+}
+
+
+#grid1{
+    display: grid;
+    grid-template-columns: 15% 15% 25%;
+    grid-template-rows: 30% 30% 30%;
+    justify-content: space-around;
+}
+
+.cajas1{
+    background-color: #ffff;
+    height: 2.5rem;
+    width: 6rem;
+    border: 0.5em solid #ffff;
+    margin: 1rem auto 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.cajas1:hover{
+    background-color: #3a9c8f;
+    color: #ffff;
+    border: 0.2rem solid #3a9c8f;
+}
+
+#grid1 .cajas1 p:hover{
+    color: #ffff;
+}
+
+
+#grid1 .cajas1 p{
+    margin: 0.2rem 0.5rem;
+    color: #c2c2c2;
+    font-size: x-small;
+    font-weight: 100;
+}
+
+
+footer button{
+    width: 20.5rem;
+    height: 3rem;
+    background-color: #b5e1e2;
+    color: #163d32;
+    border: 0.5rem solid #b5e1e2; 
+    font-size: small;
+    font-weight: 600;
+    border-radius: 1rem;
+    position: absolute;
+    margin: 50rem 1.5rem auto;
+}

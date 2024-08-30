@@ -1,0 +1,119 @@
+*{
+    font-family: "Kanit", sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #c6e8e8, #eabfbd);
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+#cuadrado{
+    background-color: #ffff;
+    text-align: center;
+    border-radius: 2rem;
+    margin: 1rem 1rem 0.5rem;
+    padding: 0.5rem;
+}
+
+#cuadrado img{
+    height: 5rem;
+}
+
+.h1{
+    color: #163d32;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#cuadrado p{
+    color: #bbbdca;
+    font-weight: 200;
+    font-size: small;
+}
+
+#cuadrado span{
+    color: #163d32;
+}
+
+.negrilla{
+    font-weight: 500;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.cajas{
+    background-color: #ffff;
+    border-radius: 0.5rem;
+    height: 4rem;
+    width: 10rem;
+    margin: 1rem auto auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.cajas i{
+    color: #68d3de;
+    margin: 1rem;
+    font-size: large;
+}
+
+.cajas p{
+    color: #192f5d;
+    font-size: small;
+    font-weight: 300;
+}
+
+
+#grid2{
+    background-color: #ffff;
+    height: 22.6rem;
+    margin-top: 1.5rem;
+    border-radius: 2rem 2rem 0rem 0rem;
+}
+
+#grid2 p{
+    color: #163d32;
+    text-align: center;
+    font-size: large;
+    font-weight: 400;
+    padding-top: 1.5rem;
+}
+
+#grid2 .cajas{
+    width: 20rem;
+    border: 0.1rem solid #f4f4f4;
+    color: #163d32;
+    font-weight: 400;
+    font-size: medium;
+}
+
+#grid2 span{
+    color: #d8696b;
+    font-size: larger;
+    font-weight: 300;
+}
+
+.precio{
+    position: absolute;
+    margin-left: 14rem;
+}
+
+#Boton{
+    border-radius: 1.5rem;
+    border: 0.5rem solid #3a9c8f;
+    background-color: #3a9c8f;
+    color: #ffff;
+    width: 12rem;
+    font-weight: 100;
+    position: absolute;
+    margin-top: -3.5rem;
+    margin-left: 6rem;
+}

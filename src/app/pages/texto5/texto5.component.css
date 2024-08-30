@@ -1,0 +1,33 @@
+*{
+    font-family: "Kanit", sans-serif;
+}
+
+nav img{
+    height: 12rem;
+    margin: 1rem -4rem;
+}
+
+#foto img{
+    height: 10rem;
+    margin-left: 5.5rem;
+    border-radius: 50%;
+    border: 15px solid white;
+    box-shadow: 1.5rem -0.5rem 1.5rem #cfcfcf;
+}
+
+p{
+    font-size: x-large;
+    font-weight: 500;
+    color: #194136;
+    text-align: center;
+}
+
+button{
+    background-color: #77bbb2;
+    border: 0.5rem solid #77bbb2;
+    border-radius: 1rem;
+    width: 12rem;
+    font-weight: 600;
+    color: #163d32;
+    margin-left: 5rem;
+}

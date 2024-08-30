@@ -1,0 +1,153 @@
+*{
+    font-family: "Kanit", sans-serif;
+
+}
+
+.Flex{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+#content{
+    height: 10rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.carrusel{
+    width: 20rem;
+    height: 100%;
+}
+
+.Tarjeta{
+    height: 100%;
+    border-radius: 1rem;
+}
+
+#c1{
+    background-color: #b5e1e2;
+}
+
+#c2{
+    background-color: #8bcf42;
+}
+
+#c3{
+   background-color:  #f5cfce;
+}
+
+button{
+    background-color: #ededed;
+    color: #305249;
+    border: 0.5rem solid #ededed;
+    width: 6.5rem;
+    border-radius: 1rem;    
+}
+
+button:hover{
+    background-color: #3a9c8f;
+    color: #ffff;
+    border: 0.5rem solid #3a9c8f;
+}
+
+#puntos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#puntos > a{
+    color: #f1f0f3;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: -2.5rem 1rem;
+}
+
+#puntos > a:hover{
+    color: #e6b0ae;
+}
+
+.formulario{
+    margin-top: 1rem;
+}
+
+.formulario input{
+    width: 85%;
+    height: 2rem;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    border: 0.125rem solid #ebeced;
+    padding-left: 1rem;
+}
+
+.formulario p{
+    color: #b3b2b5;
+    font-size: small;
+    font-weight: 400;
+    margin-left: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#flex{
+    display: flex;
+    justify-content: space-between;
+    max-width: 20.5rem;
+}
+
+.formu{
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.formu i{
+    position: absolute;
+    margin: -1.7rem 9rem;
+    color: #f7f7f7;
+}
+
+.formu:last-child{
+    margin-right: 0;
+}
+
+footer{
+    max-width: 21rem;
+    margin: 0 auto;
+}
+
+footer span{
+    color: #62b7d8;
+}
+
+.abajo{
+    font-size: small;
+    font-weight: 400;
+    margin-top: auto;
+}
+
+.arriba{
+    font-size: medium;
+    font-weight: 400;
+    margin-bottom: auto;
+    margin-top: 4rem;
+}
+
+footer hr{
+    border: 8;
+    border-top: 2px dashed #c5c5c5;
+    background: none;
+}
+
+#Boton{
+    border-radius: 1.5rem;
+    border: 0.5rem solid #3a9c8f;
+    background-color: #3a9c8f;
+    color: #ffff;
+    width: 12rem;
+    font-weight: 100;
+    position: absolute;
+    margin-top: 3rem;
+    margin-left: 5rem;
+}
