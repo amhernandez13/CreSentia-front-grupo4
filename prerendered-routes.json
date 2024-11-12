@@ -1,0 +1,22 @@
+{
+  "routes": [
+    "/",
+    "/calendario-induccion",
+    "/casa",
+    "/consentimiento",
+    "/formulario",
+    "/formulario-2",
+    "/general",
+    "/informacion",
+    "/pago",
+    "/programa",
+    "/sesion",
+    "/sesion-induccion-terapeuta",
+    "/terapeuta-registro-5",
+    "/texto",
+    "/texto2",
+    "/texto3",
+    "/texto4",
+    "/texto5"
+  ]
+}
