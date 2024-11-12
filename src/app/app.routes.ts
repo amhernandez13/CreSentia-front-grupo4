@@ -19,7 +19,7 @@ import { ProgramaComponent } from './pages/programa/programa.component';
 import { SesionComponent } from './pages/sesion/sesion.component';
 
 export const routes: Routes = [
-  { path: 'terapeuta-registro', component: TerapeutaRegistroComponent },
+  { path: '', component: TerapeutaRegistroComponent },
   { path: 'terapeuta-registro-5', component: TerapeutaRegistro5Component },
   { path: 'calendario-induccion', component: CalendarioInduccionComponent },
   {
