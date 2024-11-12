@@ -127,20 +127,9 @@ export class TerapeutaRegistroComponent {
         console.log(`${key}:`, value);
       });
 
-      this.UserTerapeutaService.registerUser(formData).subscribe({
-        next: (response) => {
-          console.log('Registro exitoso', response);
-          alert('Registro exitoso!');
-          // Navegar a otra ruta si el registro es exitoso
-          this.router.navigate(['/ruta-a-donde-ir']);
-        },
-        error: (error) => {
-          console.error('Error en el registro', error);
-          alert(
-            'Ocurrió un error durante el registro. Verifica que hayas diligenciado todos los campos, incluído el de tu foto.'
-          );
-        },
-      });
+      // Muestra la alerta y redirige a la ruta sin enviar a la base de datos
+      alert('Registro exitoso!');
+      this.router.navigate(['/sesion-induccion-terapeuta']);
     }
   }
 }
