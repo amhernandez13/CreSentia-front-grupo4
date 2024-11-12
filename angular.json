@@ -52,7 +52,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/cre-sentia-front-grupo4/"
+              "baseHref": "/"
             },
             "development": {
               "optimization": false,
