@@ -51,7 +51,8 @@
                   "maximumError": "5kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/cre-sentia-front-grupo4/"
             },
             "development": {
               "optimization": false,
